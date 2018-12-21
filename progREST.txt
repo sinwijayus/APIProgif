@@ -1,0 +1,23 @@
+Progress:
+
+[V] using existing database schema(HR) in Oracle VM Database Developer, make web service with localhost
+[X] implement new database schema, using a 1000+ row data market supplies
+  [V] Alter session table to plugable database
+  [V] Making new user granted with resource,sysdba,connect ability 
+[V] connect sql Developer to 'new' database
+[V] import .xls file to make .sql database file. later for making REST
+[V] make REST service with ORDS, using a port(localhost:8089) for testing purposes
+[X] make auto-service REST from sql dev, other plan
+  [X] change function from existing HR database API to market supplies friendly function
+  
+[V] try to commit, push to github existing API. 
+
+
+
+Problem:
+
+- ORA-01033, database in initializing/shutdown, try to alter session with SQLPlus, if doesn't work
+  make new database. happen 2 times
+- ORA-12514, TNS doesn't listen. Already trying to add some user and service in tnsnames.ora, still couldn't figure out how to change tnslistener.ora
+- ORA-01033 happen again when login for auto REST service, already login with right user w/ SYSDBA permission
+- cannot login to ords_admin when restarting REST service process.
